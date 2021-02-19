@@ -5,7 +5,7 @@ cabang = input('Nama File : ')
 sales = open(cabang + '.csv')
 
 # CABANG
-cabang = ['metro','antapani','cisitu','jatinangor','sukabirus','sukajadi','sukapura','unjani']
+# cabang = ['metro','antapani','cisitu','jatinangor','sukabirus','sukajadi','sukapura','unjani']
 
 # BLOCK
 # variabel product assembly
