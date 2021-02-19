@@ -4401,7 +4401,7 @@ isi += 'MCN20030101;Sambal Mamah;Gram;' + str(sambal_mamah_MCN20030101).replace(
 isi += 'MCN20020101;Sambal Tomat;Gram;' + str(sambal_tomat_MCN20020101).replace('.',',') + '\n'
 isi += 'MCN20010101;Sambal Matah;Gram;' + str(sambal_matah_MCN20010101).replace('.',',') + '\n'
 isi += 'MCN20050101;Bumbu Crisbar;Gram;' + str(bumbu_crisbar_MCN20050101).replace('.',',') + '\n'
-isi += 'MCN20060101;JRBCSS 523 G;Gram;' + str(0) + '\n'
+isi += 'MCN20060101;Tepung Racik (Samara Micron);' + str(0) + '\n'
 
 isi += 'SKH30010101;Ayam;Pcs;' + str(ayam_SKH30010101).replace('.',',') + '\n'
 isi += 'BGP10010101;Box Packaging Take Away Combo;Pcs;' + str(box_packaging_takeaway_combo_BGP10010101).replace('.',',') + '\n'
@@ -4410,7 +4410,7 @@ isi += 'BGP10040101;Box Packaging Paper Bag;Pcs;' + str(box_packaging_paper_bag_
 isi += 'SPD10020101;Paperbowl 5 oz;Pcs;' + '0\n'
 
 isi += 'RJC10160201;Beras Putih;Gram;' + str(beras_putih_RJC10160201).replace('.',',') + '\n'
-isi += 'RJC10020101;Tepung Racik;Gram;' + str(tepung_racik_RJC10020101).replace('.',',') + '\n'
+isi += 'RJC10020101;Tepung Racik (Rajacabe);Gram;' + str(tepung_racik_RJC10020101).replace('.',',') + '\n'
 
 isi += 'RJC10010101;Bawang Putih Kupas;Gram;' + str(bawang_putih_biasa_RJC10010101).replace('.',',') + '\n'
 isi += 'RJC20040101;Cengek Domba Lembang;Gram;' + '0\n'
