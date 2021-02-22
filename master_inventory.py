@@ -30,6 +30,7 @@ topping_keju = 0
 topping_crisbar_madu = 0
 topping_crisbar_frozen = 0
 topping_mamah_frozen = 0
+topping_saus_gravy = 0
 kuah_tongseng = 0
 nasi_dine_in = 0
 es_teh_dine_in = 0
@@ -56,6 +57,9 @@ minum = 0
 orange_takeaway = 0
 sjora_mango_peach = 0
 kol_crispy = 0
+paper_bowl = 0
+perkedel = 0
+sigulmer = 0
 
 # BLOCK
 # sku_nama = {}
@@ -4101,7 +4105,231 @@ for penjualan in sales.readlines():
         es_teh_dine_in += barang_terjual
         tempe_crispy += barang_terjual
         dua_chicken_skin_crispy += barang_terjual
+
+    # Bantai Spesial Juara Es Teh (GRABFOOD)
+    elif sku == '10910294':
+        ayam_geprek_crispy += barang_terjual
+        topping_crisbar += barang_terjual
+        nasi_takeaway += barang_terjual
+        es_teh_takeaway += barang_terjual
+        paper_cost_takeaway_l +- barang_terjual
+        tempe_crispy += barang_terjual
+        tahu_crispy += barang_terjual
+
+    # Bantai Spesial Juara Lemon (GRABFOOD)
+    elif sku == '10910264':
+        ayam_geprek_crispy += barang_terjual
+        topping_crisbar += barang_terjual
+        nasi_takeaway += barang_terjual
+        lemon_tea_takeaway += barang_terjual
+        paper_cost_takeaway_l +- barang_terjual
+        tempe_crispy += barang_terjual
+        tahu_crispy += barang_terjual
+
+    # Bantai Spesial Juara Milo (GRABFOOD)
+    elif sku == '10910274':
+        ayam_geprek_crispy += barang_terjual
+        topping_crisbar += barang_terjual
+        nasi_takeaway += barang_terjual
+        milo_takeaway += barang_terjual
+        paper_cost_takeaway_l +- barang_terjual
+        tempe_crispy += barang_terjual
+        tahu_crispy += barang_terjual
+
+    # Buy 1 Crisbee Es Teh Free 1 Crisbar Es Teh (DINE IN)
+    elif sku == '10912890':
+        ayam_crispy += 2*barang_terjual
+        nasi_dine_in += 2*barang_terjual
+        paper_cost_dine_in += 2*barang_terjual
+        es_teh_dine_in += 2*barang_terjual
+        topping_crisbar += barang_terjual
+        topping_saus_gravy += barang_terjual
+        paper_bowl += barang_terjual
+
+    # Buy 1 Crisbee Es Teh Free 1 Crisbar Es Teh Online / Take Away
+    elif (sku == '10912893') or (sku == '10912894') or (sku == '10912892'):
+        ayam_crispy += 2*barang_terjual
+        nasi_takeaway += 2*barang_terjual
+        paper_cost_takeaway_l += 2*barang_terjual
+        paper_bowl += barang_terjual
+        topping_saus_gravy += barang_terjual
+        topping_crisbar += barang_terjual
+        paper_bowl += barang_terjual
+        es_teh_takeaway += 2*barang_terjual
+
+    # Buy 1 Crisbee Lemon Free 1 Crisbar Es Teh Online (GRABFOOD)
+    elif sku == '10912864':
+        ayam_crispy += 2*barang_terjual
+        nasi_takeaway += 2*barang_terjual
+        paper_cost_takeaway_l += 2*barang_terjual
+        paper_bowl += barang_terjual
+        topping_saus_gravy += barang_terjual
+        topping_crisbar += barang_terjual
+        paper_bowl += barang_terjual
+        lemon_tea_takeaway += barang_terjual
+        es_teh_takeaway += barang_terjual
+
+    # Buy 1 Crisbee Milo Free 1 Crisbar Es Teh Online (GRABFOOD)
+    elif sku == '10912874':
+        ayam_crispy += 2*barang_terjual
+        nasi_takeaway += 2*barang_terjual
+        paper_cost_takeaway_l += 2*barang_terjual
+        paper_bowl += barang_terjual
+        topping_saus_gravy += barang_terjual
+        topping_crisbar += barang_terjual
+        paper_bowl += barang_terjual
+        milo_takeaway += barang_terjual
+        es_teh_takeaway += barang_terjual
         
+    # Buy 1 Crisbee Orange Free 1 Crisbar Es Teh Online (GRABFOOD)
+    elif sku == '10912884':
+        ayam_crispy += 2*barang_terjual
+        nasi_takeaway += 2*barang_terjual
+        paper_cost_takeaway_l += 2*barang_terjual
+        paper_bowl += barang_terjual
+        topping_saus_gravy += barang_terjual
+        topping_crisbar += barang_terjual
+        paper_bowl += barang_terjual
+        orange_takeaway += barang_terjual
+        es_teh_takeaway += barang_terjual
+
+    # Paket Ayam Crisbee Gravy Es Teh (DINE IN)
+    elif sku == '10112090':
+        ayam_crispy += barang_terjual
+        paper_cost_dine_in += barang_terjual
+        es_teh_dine_in += barang_terjual
+        topping_saus_gravy += barang_terjual
+        paper_bowl += barang_terjual
+        nasi_dine_in += barang_terjual
+
+    # Paket Ayam Crisbee Gravy Es Teh Online
+    elif (sku == '10112093') or (sku == '10112094'):
+        ayam_crispy += barang_terjual
+        paper_cost_takeaway_l += barang_terjual
+        es_teh_takeaway += barang_terjual
+        topping_saus_gravy += barang_terjual
+        paper_bowl += barang_terjual
+        nasi_takeaway += barang_terjual
+
+    # Paket Ayam Crisbee Gravy Lemon (DINE IN)
+    elif sku == '10112060':
+        ayam_crispy += barang_terjual
+        paper_cost_dine_in += barang_terjual
+        lemon_tea_dine_in += barang_terjual
+        topping_saus_gravy += barang_terjual
+        paper_bowl += barang_terjual
+        nasi_dine_in += barang_terjual
+
+    # Paket Ayam Crisbee Gravy Lemon Online / Takeaway
+    elif (sku == '10112063') or (sku == '10112064') or (sku == '10112062'):
+        ayam_crispy += barang_terjual
+        paper_cost_takeaway_l += barang_terjual
+        lemon_tea_takeaway += barang_terjual
+        topping_saus_gravy += barang_terjual
+        paper_bowl += barang_terjual
+        nasi_takeaway += barang_terjual
+
+    # Paket Ayam Crisbee Gravy Milo (DINE IN)
+    elif sku == '10112070':
+        ayam_crispy += barang_terjual
+        paper_cost_dine_in += barang_terjual
+        milo_dine_in += barang_terjual
+        topping_saus_gravy += barang_terjual
+        paper_bowl += barang_terjual
+        nasi_dine_in += barang_terjual
+
+    # Paket Ayam Crisbee Gravy Milo Online (GO FOOD)
+    elif sku == '10112073':
+        ayam_crispy += barang_terjual
+        paper_cost_takeaway_l += barang_terjual
+        milo_takeaway += barang_terjual
+        topping_saus_gravy += barang_terjual
+        paper_bowl += barang_terjual
+        nasi_takeaway += barang_terjual
+
+    # Paket Ayam Crisbee Gravy Orange Online (GRABFOOD)
+    elif sku == '10112084':
+        ayam_crispy += barang_terjual
+        paper_cost_takeaway_l += barang_terjual
+        orange_takeaway += barang_terjual
+        topping_saus_gravy += barang_terjual
+        paper_bowl += barang_terjual
+        nasi_takeaway += barang_terjual
+
+    # Paket Crisbee Gravy Es Teh Takeaway (TAKE AWAY)
+    elif sku == '10112092':
+        ayam_crispy += barang_terjual
+        paper_cost_takeaway_l += barang_terjual
+        es_teh_takeaway += barang_terjual
+        topping_saus_gravy += barang_terjual
+        paper_bowl += barang_terjual
+        nasi_takeaway += barang_terjual
+
+    # Raksasa Crisbar Juara Es Teh (GRABFOOD)
+    elif sku == '10910394':
+        ayam_geprek_crispy += barang_terjual
+        nasi_takeaway += barang_terjual
+        paper_cost_takeaway_l += barang_terjual
+        topping_crisbar += barang_terjual
+        tahu_crispy += barang_terjual
+        tempe_crispy += barang_terjual
+        terong_crispy += barang_terjual
+        telur_sayur += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        es_teh_takeaway += barang_terjual
+
+    # Raksasa Crisbar Juara Lemon (GRABFOOD)
+    elif sku == '10910364':
+        ayam_geprek_crispy += barang_terjual
+        nasi_takeaway += barang_terjual
+        paper_cost_takeaway_l += barang_terjual
+        topping_crisbar += barang_terjual
+        tahu_crispy += barang_terjual
+        tempe_crispy += barang_terjual
+        terong_crispy += barang_terjual
+        telur_sayur += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        lemon_tea_takeaway += barang_terjual
+
+    # Raksasa Crisbar Juara Milo (GRABFOOD)
+    elif sku == '10910374':
+        ayam_geprek_crispy += barang_terjual
+        nasi_takeaway += barang_terjual
+        paper_cost_takeaway_l += barang_terjual
+        topping_crisbar += barang_terjual
+        tahu_crispy += barang_terjual
+        tempe_crispy += barang_terjual
+        terong_crispy += barang_terjual
+        telur_sayur += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        milo_takeaway += barang_terjual
+
+    # Raksasa Crisbar Juara Orange (GRABFOOD)
+    elif sku == '10910384':
+        ayam_geprek_crispy += barang_terjual
+        nasi_takeaway += barang_terjual
+        paper_cost_takeaway_l += barang_terjual
+        topping_crisbar += barang_terjual
+        tahu_crispy += barang_terjual
+        tempe_crispy += barang_terjual
+        terong_crispy += barang_terjual
+        telur_sayur += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        orange_takeaway += barang_terjual
+
+    # Saus gravy online
+    elif sku == '9000204':
+        topping_saus_gravy += barang_terjual
+        paper_bowl += barang_terjual
+
+    # Perkedel
+    elif (sku == '70000090') or (sku == '70000092') or (sku == '70000093') or (sku == '70000094'):
+        perkedel += barang_terjual
+
+    # Sigulmer
+    elif (sku == '50000014') or (sku == '50000013') or (sku == '50000012') or (sku == '50000010'):
+        sigulmer += barang_terjual
+
     else:
         print(sku + ' - ' + nama_item + ' - ' + str(barang_terjual))
 
@@ -4393,21 +4621,27 @@ box_packaging_paper_bag_BGP10040101 = (1*paper_cost_takeaway_paper_bag)
 # Papan
 tempe_RJC20090101 = (0.0625)*tempe_crispy
 
+# Gram
+saus_gravy_MCN20060101 = (75)*topping_saus_gravy
+
+# Pcs
+paperbowl_5oz_SPD10020101 = paper_bowl
+
 # ------------------------------------------------------------ EDIT YANG DI BAWAH AJA ----------------------------------------------------------------
 
 isi = ''
 isi += 'SKU;Nama Item;Satuan;Sold\n'
-isi += 'MCN20030101;Sambal Mamah;Gram;' + str(sambal_mamah_MCN20030101).replace('.',',') + '\n'
-isi += 'MCN20020101;Sambal Tomat;Gram;' + str(sambal_tomat_MCN20020101).replace('.',',') + '\n'
-isi += 'MCN20010101;Sambal Matah;Gram;' + str(sambal_matah_MCN20010101).replace('.',',') + '\n'
-isi += 'MCN20050101;Bumbu Crisbar;Gram;' + str(bumbu_crisbar_MCN20050101).replace('.',',') + '\n'
-isi += 'MCN20060101;Tepung Racik (Samara Micron);' + str(0) + '\n'
+isi += 'MCN20030101;SRMAMCS 250 G;Gram;' + str(sambal_mamah_MCN20030101).replace('.',',') + '\n'
+isi += 'MCN20020101;SRTOMCS 250 G;Gram;' + str(sambal_tomat_MCN20020101).replace('.',',') + '\n'
+isi += 'MCN20010101;SRMATCS 115 G;Gram;' + str(sambal_matah_MCN20010101).replace('.',',') + '\n'
+isi += 'MCN20050101;BRCCBS 725 G;Gram;' + str(bumbu_crisbar_MCN20050101).replace('.',',') + '\n'
+isi += 'MCN20060101;JRBCSS 523 G;Gram;' + str(saus_gravy_MCN20060101).replace('.',',') + '\n'
 
 isi += 'SKH30010101;Ayam;Pcs;' + str(ayam_SKH30010101).replace('.',',') + '\n'
 isi += 'BGP10010101;Box Packaging Take Away Combo;Pcs;' + str(box_packaging_takeaway_combo_BGP10010101).replace('.',',') + '\n'
 isi += 'BGP10020101;Box Packaging Alacarte;Pcs;' + str(box_packaging_alacarte_BGP10020101).replace('.',',') + '\n'
 isi += 'BGP10040101;Box Packaging Paper Bag;Pcs;' + str(box_packaging_paper_bag_BGP10040101).replace('.',',') + '\n'
-isi += 'SPD10020101;Paperbowl 5 oz;Pcs;' + '0\n'
+isi += 'SPD10020101;Paperbowl 5 oz;Pcs;' + str(paperbowl_5oz_SPD10020101).replace('.',',') + '0\n'
 
 isi += 'RJC10160201;Beras Putih;Gram;' + str(beras_putih_RJC10160201).replace('.',',') + '\n'
 isi += 'RJC10020101;Tepung Racik (Rajacabe);Gram;' + str(tepung_racik_RJC10020101).replace('.',',') + '\n'
@@ -4467,6 +4701,8 @@ isi += 'XYZ10030201;Karbol;ML;' + str(0) + '\n'
 isi += 'XYZ10040101;Anti Lalat;ML;' + str(0) + '\n'
 isi += 'XYZ10050201;Multy Purpose (Sabun Cuci);ML;' + str(0) + '\n'
 isi += 'XYZ10060201;Laundry Liquid detergen;ML;' + str(0) + '\n'
+isi += 'SKU_sigulmer;Sigulmer;Pcs;' + str(sigulmer).replace('.',',') + '\n'
+isi += 'SKU_perkedel;Perkedel;Pcs;' + str(perkedel).replace('.',',') + '\n'
 
 # isi += 'MCN2004010;Marinasi;Gram;' + str(marinasi_MCN20040101).replace('.',',') + '\n'
 # isi += 'NES10030201;Lemonade;Gr;' + str(lemonade_NES10030201).replace('.',',') + '\n'
