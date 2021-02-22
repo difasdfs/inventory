@@ -4631,11 +4631,11 @@ paperbowl_5oz_SPD10020101 = paper_bowl
 
 isi = ''
 isi += 'SKU;Nama Item;Satuan;Sold\n'
-isi += 'MCN20030101;SRMAMCS 250 G;Gram;' + str(sambal_mamah_MCN20030101).replace('.',',') + '\n'
-isi += 'MCN20020101;SRTOMCS 250 G;Gram;' + str(sambal_tomat_MCN20020101).replace('.',',') + '\n'
-isi += 'MCN20010101;SRMATCS 115 G;Gram;' + str(sambal_matah_MCN20010101).replace('.',',') + '\n'
-isi += 'MCN20050101;BRCCBS 725 G;Gram;' + str(bumbu_crisbar_MCN20050101).replace('.',',') + '\n'
-isi += 'MCN20060101;JRBCSS 523 G;Gram;' + str(saus_gravy_MCN20060101).replace('.',',') + '\n'
+isi += 'MCN20030101;Topping Mamah;Gram;' + str(sambal_mamah_MCN20030101).replace('.',',') + '\n'
+isi += 'MCN20020101;Topping Tomat;Gram;' + str(sambal_tomat_MCN20020101).replace('.',',') + '\n'
+isi += 'MCN20010101;Topping Matah;Gram;' + str(sambal_matah_MCN20010101).replace('.',',') + '\n'
+isi += 'MCN20050101;Topping Crisbar;Gram;' + str(bumbu_crisbar_MCN20050101).replace('.',',') + '\n'
+isi += 'MCN20060101;Topping Gravy;Gram;' + str(saus_gravy_MCN20060101).replace('.',',') + '\n'
 
 isi += 'SKH30010101;Ayam;Pcs;' + str(ayam_SKH30010101).replace('.',',') + '\n'
 isi += 'BGP10010101;Box Packaging Take Away Combo;Pcs;' + str(box_packaging_takeaway_combo_BGP10010101).replace('.',',') + '\n'
