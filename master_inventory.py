@@ -75,17 +75,28 @@ sigulmer = 0
 #     sku_nama[sku] = nama_item
 
 # BLOCK
-skip = 5
-i = 0
+skip = [
+    '(Crew)Nasi + 2 Chiken Skin + Topping Manis + 1 Cup Es Teh',
+    '(Crew)Nasi + Tahu Crispy + Terong + Topping Matah + 1 Cup Es Teh',
+    '(Crew)Nasi + Telur + Tempe Crispy + Topping Goang + 1 Cup Es Teh',
+    '(Driver)Paket Ayam Crispy + Lalab + Es Teh Online',
+    '(Driver)Paket Crispy Es Teh Manis + Lalab',
+    '(Makan Driver) Paket Ayam Crispy + Nasi + Es Teh Manis',
+    '"(Paket 1 Karyawan T.Manis) Nasi',
+    '"(Paket 1 Karyawan T.Matah) Nasi',
+    '"(Paket 2 Karyawan T.Manis) Nasi',
+    '"(Paket 2 Karyawan T.Matah) Nasi',
+    '"(Paket 3 Karyawan T.Manis) Nasi',
+    '"(Paket 3 Karyawan T.Matah) Nasi',
+    'Item name'
+]
 
 for penjualan in sales.readlines():
-
-    if i <= skip:
-        i += 1
-        continue
-
     penjualan = penjualan.split(',')
     
+    if penjualan[0] in skip:
+        continue
+
     if penjualan[1] == 'SKU':
         continue
         
@@ -4337,6 +4348,42 @@ for penjualan in sales.readlines():
     # Sigulmer
     elif (sku == '50000014') or (sku == '50000013') or (sku == '50000012') or (sku == '50000010'):
         sigulmer += barang_terjual
+
+    # 4 Ayam Crispy Original/Geprek Ala Carte
+    elif sku == '10310000':
+        paper_cost_dine_in += 4*barang_terjual
+        ayam_crispy += 4*barang_terjual
+    
+    # Gravy Milo Takeaway
+    elif sku in ['10112074','10112072']:
+        paper_cost_takeaway_l += barang_terjual
+        ayam_crispy += barang_terjual
+        nasi_takeaway += barang_terjual
+        milo_takeaway += barang_terjual
+        topping_saus_gravy += barang_terjual
+        paper_bowl += barang_terjual
+
+    # Paket Ayam Crisbee Gravy Orange (DINE IN)
+    elif sku == '10112080':
+        paper_cost_dine_in += barang_terjual
+        ayam_crispy += barang_terjual
+        nasi_dine_in += barang_terjual
+        orange_dine_in += barang_terjual
+        topping_saus_gravy += barang_terjual
+        paper_bowl += barang_terjual
+
+    # Paket Gravy Orang Takeaway
+    elif sku in ['10112083','10112082']:
+        paper_cost_takeaway_l += barang_terjual
+        paper_bowl += barang_terjual
+        nasi_takeaway += barang_terjual
+        ayam_crispy += barang_terjual
+        orange_takeaway += barang_terjual
+        topping_saus_gravy += barang_terjual
+
+    # Topping Saus Gravy
+    elif sku in ['9000200', '9000202', '9000203']:
+        topping_saus_gravy += barang_terjual
 
     else:
         print(sku + ' - ' + nama_item + ' - ' + str(barang_terjual))
