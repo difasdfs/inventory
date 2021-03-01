@@ -4451,6 +4451,7 @@ air_galon_AIR10010101 += (250*lemonade_takeaway)
 air_galon_AIR10010101 += (250*milo_takeaway)
 air_galon_AIR10010101 += (250*orange_takeaway)
 air_galon_AIR10010101 += (18.51852*kol_crispy)
+air_galon_AIR10010101 += (107.142*topping_saus_gravy)
 
 # PCS
 box_packaging_takeaway_combo_BGP10010101 = (1*paper_cost_takeaway_l)
@@ -4622,7 +4623,7 @@ box_packaging_paper_bag_BGP10040101 = (1*paper_cost_takeaway_paper_bag)
 tempe_RJC20090101 = (0.0625)*tempe_crispy
 
 # Gram
-saus_gravy_MCN20060101 = (75)*topping_saus_gravy
+saus_gravy_MCN20060101 = (20.46)*topping_saus_gravy
 
 # Pcs
 paperbowl_5oz_SPD10020101 = paper_bowl
@@ -4703,24 +4704,6 @@ isi += 'XYZ10050201;Multy Purpose (Sabun Cuci);ML;' + str(0) + '\n'
 isi += 'XYZ10060201;Laundry Liquid detergen;ML;' + str(0) + '\n'
 isi += 'SKU_sigulmer;Sigulmer;Pcs;' + str(sigulmer).replace('.',',') + '\n'
 isi += 'SKU_perkedel;Perkedel;Pcs;' + str(perkedel).replace('.',',') + '\n'
-
-# isi += 'MCN2004010;Marinasi;Gram;' + str(marinasi_MCN20040101).replace('.',',') + '\n'
-# isi += 'NES10030201;Lemonade;Gr;' + str(lemonade_NES10030201).replace('.',',') + '\n'
-# isi += 'RJC10200101;Bawang Merah Biasa;Gram;' + str(bawang_merah_biasa_RJC10200101).replace('.',',') + '\n'
-# isi += 'TNM10120201;Merica (Saerah);Gram;' + str(merica_TNM10120201).replace('.',',') + '\n'
-# isi += 'TNM10090201;Saus Tiram (Lee Kum Kee);Gram;' + str(saus_tiram_lee_kum_kee_TNM10090201).replace('.',',') + '\n'
-# isi += 'TNM10110101;Ketumbar;Gram;' + str().replace('.',',') + '\n'
-# isi += 'TNM10100101;Maizenna (Maizenaku);Gram;' + str(maizenna_maizenaku_TNM10100101).replace('.',',') + '\n'
-# isi += 'MLP10150201;Plastik PE 7x15 (Tomat);Pack;' + str(plastik_pe_7x15_tomat_MLP10150201).replace('.',',') + '\n'
-# isi += 'RJC20220101;Cabe Merah TW;Gram;' + str(cabe_merah_tw_RJC20220101).replace('.',',') + '\n'
-# isi += 'RJC20210101;Cabe Keriting Biasa;Gram;' + str(cabe_keriting_biasa_RJC20210101).replace('.',',') + '\n'
-# isi += 'TNM10160101;Terasi (ABC);Gram;' + str(terasi_abc_TNM10160101).replace('.',',') + '\n'
-# isi += 'RJC20250101;Sereh;Gram;' + str(serah_RJC20250101).replace('.',',') + '\n'
-# isi += 'TNM10050201;Garam (Kapal);Gram;' + str(garam_kapal_TNM10050201).replace('.',',') + '\n'
-# isi += 'TNM10070201;MSG (Sasa);Gram;' + str(msg_sasa_TNM10070201).replace('.',',') + '\n'
-# isi += 'TNM10010101;Gula Putih (Indolampung);Gram;' + str(gula_putih_indolampung_TNM10010101).replace('.',',') + '\n'
-# isi += 'FRS10020201;Pudding (Nutrijel) Cokelat;Pcs;' + str(pudding_nutrijel_cokelat_FRS10020201).replace('.',',') + '\n'
-
 
 print(isi)
 
