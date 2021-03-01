@@ -75,7 +75,15 @@ sigulmer = 0
 #     sku_nama[sku] = nama_item
 
 # BLOCK
+skip = 5
+i = 0
+
 for penjualan in sales.readlines():
+
+    if i <= skip:
+        i += 1
+        continue
+
     penjualan = penjualan.split(',')
     
     if penjualan[1] == 'SKU':
@@ -83,7 +91,7 @@ for penjualan in sales.readlines():
         
     nama_item = penjualan[0]
     sku = penjualan[1]
-    barang_terjual = int(penjualan[3].split('.')[0])
+    barang_terjual = int(float(penjualan[3].split('.')[0]))
     
     # (Makan Driver) Paket Ayam Crispy + Nasi + Es Teh Manis (DINE IN)
     if sku == '10711090':
