@@ -4384,6 +4384,233 @@ for penjualan in sales.readlines():
     # Topping Saus Gravy
     elif sku in ['9000200', '9000202', '9000203']:
         topping_saus_gravy += barang_terjual
+        paper_bowl += barang_terjual
+
+    # Ala Carte Crisbee (DINE IN DAN TAKEAWAY)
+    elif sku == '10012000':
+        topping_saus_gravy += barang_terjual
+        ayam_crispy += barang_terjual
+        paper_bowl += barang_terjual
+        paper_cost_dine_in += barang_terjual
+
+    # Ala Carte Crisbee (GRABFOOD, GOFOOD, dan TAKEAWAY)
+    elif sku in ['10012004', '10012003', '10012002']:
+        topping_saus_gravy += barang_terjual
+        ayam_crispy += barang_terjual
+        paper_cost_takeaway_m += barang_terjual
+        paper_bowl += barang_terjual
+
+    # 3 Ayam Crisbee Gravy + 3 Nasi + 3 Es Teh (paket keluarga crisbee) GRABFOOD 
+    elif sku == '10312094':
+        ayam_geprek_crispy += 3*barang_terjual
+        nasi_takeaway += 3*barang_terjual
+        es_teh_takeaway += 3*barang_terjual
+        paper_cost_takeaway_l += 3*barang_terjual
+        topping_saus_gravy += 3*barang_terjual
+
+    # 4 Ayam Crisbar Original/Geprek Ala Carte (Dine In)
+    elif sku == '10310100':
+        paper_cost_dine_in += 4*barang_terjual
+        ayam_geprek_crispy += 4*barang_terjual
+        topping_crisbar += 4*topping_crisbar
+
+    # Nasi Ayam Crisbee Gravy (Paket NIKMAT gravy GOFOOD dan GRABFOOD)
+    elif sku in ['10112004', '10112003']:
+        paper_cost_takeaway_l += barang_terjual
+        ayam_geprek_crispy += barang_terjual
+        nasi_takeaway += barang_terjual
+        topping_saus_gravy += barang_terjual
+        paper_bowl += barang_terjual
+
+    # Crisbarbar + 2 Sigulmer (DINE IN)
+    elif sku == '10913100':
+        paper_cost_dine_in += 4*barang_terjual
+        ayam_geprek_crispy += 4*barang_terjual
+        topping_crisbar += 4*topping_crisbar
+        sigulmer += 2*barang_terjual
+
+    # Crisbarbar + 2 Sigulmer (GRABFOOD, GOFOOD, dan TAKEAWAY)
+    elif sku in ['10913102', '10913103', '10913104']:
+        paper_cost_takeaway_m += 4*barang_terjual
+        ayam_geprek_crispy += 4*barang_terjual
+        topping_crisbar += 4*topping_crisbar
+        sigulmer += 2*barang_terjual
+
+    # Crispybarbar + 2 Sigulmer (DINE IN)
+    elif sku == '10913200':
+        paper_cost_dine_in += 4*barang_terjual
+        ayam_geprek_crispy += 4*barang_terjual
+        topping_crisbar += 4*topping_crisbar
+        sigulmer += 2*barang_terjual
+
+    # Crispybarbar + 2 Sigulmer (GRABFOOD, GOFOOD, dan TAKEAWAY)
+    elif sku in ['10913202', '10913203', '10913204']:
+        paper_cost_takeaway_m += 4*barang_terjual
+        ayam_geprek_crispy += 4*barang_terjual
+        topping_crisbar += 4*topping_crisbar
+        sigulmer += 2*barang_terjual
+
+    # Puass Crisbar Es Teh + Chicken Skin + Sigulmer (DINE IN)
+    elif sku == '10912990':
+        paper_cost_dine_in += barang_terjual
+        ayam_geprek_crispy += barang_terjual
+        topping_crisbar += barang_terjual
+        nasi_dine_in += barang_terjual
+        es_teh_dine_in += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        sigulmer += barang_terjual
+
+    # Puass Crisbar Es Teh + Chicken Skin + Sigulmer (GRABFOOD, GOFOOD, dan TAKEAWAY)
+    elif sku in ['10912992', '10912993', '10912994', '10011']:
+        paper_cost_takeaway_l += barang_terjual
+        ayam_geprek_crispy += barang_terjual
+        topping_crisbar += barang_terjual
+        nasi_takeaway += barang_terjual
+        es_teh_takeaway += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        sigulmer += barang_terjual
+
+    # Puass Crisbar Lemon Tea + Chicken Skin + Sigulmer (DINE IN)
+    elif sku == '10912960':
+        paper_cost_dine_in += barang_terjual
+        ayam_geprek_crispy += barang_terjual
+        topping_crisbar += barang_terjual
+        nasi_dine_in += barang_terjual
+        lemon_tea_dine_in += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        sigulmer += barang_terjual
+
+    # Puass Crisbar Lemon Tea + Chicken Skin + Sigulmer (GRABFOOD, GOFOOD, dan TAKEAWAY)
+    elif sku in ['10912962', '10912963', '10912964', '10012']:
+        paper_cost_takeaway_l += barang_terjual
+        ayam_geprek_crispy += barang_terjual
+        topping_crisbar += barang_terjual
+        nasi_takeaway += barang_terjual
+        lemon_tea_takeaway += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        sigulmer += barang_terjual
+
+    # Puass Crisbar Milo + Chicken Skin + Sigulmer (DINE IN)
+    elif sku == '10912970':
+        paper_cost_dine_in += barang_terjual
+        ayam_geprek_crispy += barang_terjual
+        topping_crisbar += barang_terjual
+        nasi_dine_in += barang_terjual
+        milo_dine_in += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        sigulmer += barang_terjual
+
+    # Puass Crisbar Milo + Chicken Skin + Sigulmer (GRABFOOD, GOFOOD, dan TAKEAWAY)
+    elif sku in ['10912972', '10912973', '10912974', '10010']:
+        paper_cost_takeaway_l += barang_terjual
+        ayam_geprek_crispy += barang_terjual
+        topping_crisbar += barang_terjual
+        nasi_takeaway += barang_terjual
+        milo_takeaway += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        sigulmer += barang_terjual
+
+    # Puass Crisbar Orange + Chicken Skin + Sigulmer (DINE IN)
+    elif sku == '10912980':
+        paper_cost_dine_in += barang_terjual
+        ayam_geprek_crispy += barang_terjual
+        topping_crisbar += barang_terjual
+        nasi_dine_in += barang_terjual
+        orange_dine_in += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        sigulmer += barang_terjual
+
+    # Puass Crisbar Orange + Chicken Skin + Sigulmer (GRABFOOD, GOFOOD, dan TAKEAWAY)
+    elif sku in ['10912982', '10912983', '10912984']:
+        paper_cost_takeaway_l += barang_terjual
+        ayam_geprek_crispy += barang_terjual
+        topping_crisbar += barang_terjual
+        nasi_takeaway += barang_terjual
+        orange_takeaway += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        sigulmer += barang_terjual
+
+    # Puass Crisbee Es Teh + Chicken Skin + Sigulmer (DINE IN)
+    elif sku == '10913090':
+        paper_cost_dine_in += barang_terjual
+        ayam_geprek_crispy += barang_terjual
+        topping_saus_gravy += barang_terjual
+        nasi_dine_in += barang_terjual
+        es_teh_dine_in += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        sigulmer += barang_terjual
+
+    # Puass Crisbee Es Teh + Chicken Skin + Sigulmer (GRABFOOD, GOFOOD, dan TAKEAWAY)
+    elif sku in ['10913092', '10913093', '10913094']:
+        paper_cost_takeaway_l += barang_terjual
+        ayam_geprek_crispy += barang_terjual
+        topping_saus_gravy += barang_terjual
+        nasi_takeaway += barang_terjual
+        es_teh_takeaway += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        sigulmer += barang_terjual
+
+    # Puass Crisbee Lemon Tea + Chicken Skin + Sigulmer (DINE IN)
+    elif sku == '10913060':
+        paper_cost_dine_in += barang_terjual
+        ayam_geprek_crispy += barang_terjual
+        topping_saus_gravy += barang_terjual
+        nasi_dine_in += barang_terjual
+        lemon_tea_dine_in += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        sigulmer += barang_terjual
+
+    # Puass Crisbee Lemon Tea + Chicken Skin + Sigulmer (GRABFOOD, GOFOOD, dan TAKEAWAY)
+    elif sku in ['10913062', '10913063', '10913064']:
+        paper_cost_takeaway_l += barang_terjual
+        ayam_geprek_crispy += barang_terjual
+        topping_saus_gravy += barang_terjual
+        nasi_takeaway += barang_terjual
+        lemon_tea_takeaway += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        sigulmer += barang_terjual
+
+    # Puass Crisbee Milo + Chicken Skin + Sigulmer (DINE IN)
+    elif sku == '10913070':
+        paper_cost_dine_in += barang_terjual
+        ayam_geprek_crispy += barang_terjual
+        topping_saus_gravy += barang_terjual
+        nasi_dine_in += barang_terjual
+        milo_dine_in += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        sigulmer += barang_terjual
+
+    # Puass Crisbee Milo + Chicken Skin + Sigulmer (GRABFOOD, GOFOOD, dan TAKEAWAY)
+    elif sku in ['10913072', '10913073', '10913074']:
+        paper_cost_takeaway_l += barang_terjual
+        ayam_geprek_crispy += barang_terjual
+        topping_saus_gravy += barang_terjual
+        nasi_takeaway += barang_terjual
+        milo_takeaway += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        sigulmer += barang_terjual
+
+    # ----------------------------------------------------------------------
+    # Puass Crisbee Orange + Chicken Skin + Sigulmer (DINE IN)
+    elif sku == '10913080':
+        paper_cost_dine_in += barang_terjual
+        ayam_geprek_crispy += barang_terjual
+        topping_saus_gravy += barang_terjual
+        nasi_dine_in += barang_terjual
+        orange_dine_in += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        sigulmer += barang_terjual
+
+    # Puass Crisbee Orange + Chicken Skin + Sigulmer (GRABFOOD, GOFOOD, dan TAKEAWAY)
+    elif sku in ['10913082', '10913083', '10913084']:
+        paper_cost_takeaway_l += barang_terjual
+        ayam_geprek_crispy += barang_terjual
+        topping_saus_gravy += barang_terjual
+        nasi_takeaway += barang_terjual
+        orange_dine_in += barang_terjual
+        dua_chicken_skin_crispy += barang_terjual
+        sigulmer += barang_terjual
+    # ----------------------------------------------------------------------
 
     else:
         print(sku + ' - ' + nama_item + ' - ' + str(barang_terjual))
